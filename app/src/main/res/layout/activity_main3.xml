@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/carsipazar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/kullanıcıadı"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/login"
+        android:hint="Kullanıcı Adınızı Giriniz"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/şifre"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50sp"
+        android:background="@drawable/login"
+        android:hint="şifrenizi giriniz"
+        android:inputType="textPassword"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/kullanıcıadı"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/kayıt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:text="Kayıt"
+        app:layout_constraintTop_toBottomOf="@+id/şifre"
+        app:layout_constraintStart_toStartOf="@+id/kullanıcıadı">
+
+    </Button>
+
+    <Button
+        android:id="@+id/giris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:text="Giriş"
+        app:layout_constraintTop_toBottomOf="@+id/şifre"
+        app:layout_constraintEnd_toEndOf="@+id/kullanıcıadı">
+
+    </Button>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

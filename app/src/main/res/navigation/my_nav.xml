@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.pazarcarsi.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_urunFragment2"
+            app:destination="@id/urunFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profil"
+        android:name="com.example.pazarcarsi.view.HesabimFragment"
+        android:label="Hesabım"
+        tools:layout="@layout/fragment_hesabim" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.pazarcarsi.view.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.pazarcarsi.view.UrunlerFragment"
+        android:label="Ürünler"
+        tools:layout="@layout/fragment_urunler" />
+    <fragment
+        android:id="@+id/sepet"
+        android:name="com.example.pazarcarsi.view.SepetimFragment"
+        android:label="Sepetim"
+        tools:layout="@layout/fragment_sepetim" >
+        <action
+            android:id="@+id/action_sepet_to_odemeFragment"
+            app:destination="@id/odemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/urunFragment"
+        android:name="com.example.pazarcarsi.view.UrunFragment"
+        android:label="fragment_urun"
+        tools:layout="@layout/fragment_urun" >
+        <action
+            android:id="@+id/action_urunFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_urunFragment_to_aciklamaFragment"
+            app:destination="@id/aciklamaFragment" />
+        <argument
+            android:name="kiyafetisim"
+            app:argType="string" />
+        <argument
+            android:name="eskifiyat"
+            app:argType="string" />
+        <argument
+            android:name="yenifiyat"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_urunFragment_to_yorumFragment"
+            app:destination="@id/yorumFragment" />
+        <argument
+            android:name="urunfoto"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aciklamaFragment"
+        android:name="com.example.pazarcarsi.view.AciklamaFragment"
+        android:label="fragment_aciklama"
+        tools:layout="@layout/fragment_aciklama" >
+        <action
+            android:id="@+id/action_aciklamaFragment_to_urunFragment"
+            app:destination="@id/urunFragment" >
+            <argument
+                android:name="kiyafetisim" />
+            <argument
+                android:name="eskifiyat" />
+            <argument
+                android:name="yenifiyat" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/yorumFragment"
+        android:name="com.example.pazarcarsi.view.YorumFragment"
+        android:label="fragment_yorum"
+        tools:layout="@layout/fragment_yorum" >
+        <action
+            android:id="@+id/action_yorumFragment_to_urunFragment"
+            app:destination="@id/urunFragment" />
+        <action
+            android:id="@+id/action_yorumFragment_to_profil"
+            app:destination="@id/profil" />
+    </fragment>
+    <fragment
+        android:id="@+id/odemeFragment"
+        android:name="com.example.pazarcarsi.view.OdemeFragment"
+        android:label="fragment_odeme"
+        tools:layout="@layout/fragment_odeme" />
+</navigation>

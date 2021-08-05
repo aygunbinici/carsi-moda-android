@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools">
+
+                <item android:id="@+id/home"
+                    android:title="Ana Sayfa"
+                    android:icon="@drawable/ic_action_home"
+                    android:menuCategory="secondary">
+
+                </item>
+
+                <item android:id="@+id/search"
+                    android:title="Arama"
+                    android:icon="@drawable/ic_action_search"
+                    android:menuCategory="secondary">
+
+                </item>
+
+                <item android:id="@+id/menu"
+                    android:title="Ürünler"
+                    android:icon="@drawable/ic_action_menu"
+                    android:menuCategory="secondary">
+
+                </item>
+
+                <item android:id="@+id/sepet"
+                    android:title="Sepet"
+                    android:icon="@drawable/ic_action_shopping"
+                    android:menuCategory="secondary">
+
+                </item>
+
+
+                <item android:id="@+id/profil"
+                    android:title="Hesabım"
+                    android:icon="@drawable/ic_action_person"
+                    android:menuCategory="secondary">
+
+                </item>
+
+
+
+
+
+</menu>
